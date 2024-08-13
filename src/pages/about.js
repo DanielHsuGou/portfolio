@@ -36,27 +36,29 @@ const about = () => {
                 Profile
               </h2>
               <p className="font-medium">
-                Hi, I'm Daniel Hsu, an aspiring web developer with a passion for
-                creating functional and user-centered digital experiences.
-                During my university studies, I majored in animation and visual
-                effects, which has given me a deep appreciation for crafting
-                visually stunning and engaging digital products.
+                Hi, I&apos;m Daniel Hsu, an aspiring web developer with a
+                passion for creating functional and user-centered digital
+                experiences. During my university studies, I majored in
+                animation and visual effects, which has given me a deep
+                appreciation for crafting visually stunning and engaging digital
+                products.
               </p>
 
               <p className="font-medium my-4">
-                Although I'm new to the industry, I recently completed a
+                Although I&apos;m new to the industry, I recently completed a
                 full-stack web development bootcamp where I had the opportunity
                 to combine my design experience with modern web technologies,
                 including HTML, CSS, JavaScript, React, Node.js, and SQL
-                databases. I'm excited to apply these knowledge to build
+                databases. I&apos;m excited to apply these knowledge to build
                 responsive and interactive websites from the ground up.
               </p>
 
               <p className="font-medium">
-                While I may lack professional experience, I'm eager to learn and
-                grow as a web developer. I look forward to the opportunity to
-                contribute my passion and skills to your next project, and to
-                continue honing my craft in a professional setting.
+                While I may lack professional experience, I&apos;m eager to
+                learn and grow as a web developer. I look forward to the
+                opportunity to contribute my passion and skills to your next
+                project, and to continue honing my craft in a professional
+                setting.
               </p>
             </div>
             <div className="lg:hidden relative h-max rounded-2xl border-2 border-solid border-dark dark:border-light bg-light dark:bg-vdark p-8 w-1/2 max-w-[560px]">
