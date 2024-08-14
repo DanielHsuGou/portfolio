@@ -7,7 +7,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between"
+      className="my-8 first:mt-0 last:mb-0 w-[60%] lg:w-[70%] md:w-[80%] mx-auto flex flex-col items-center justify-between"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -15,11 +15,11 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl">{type}</h3>
-        <p className="capitalize font-medium text-dark/75 dark:text-primaryDark/75 my-2">
+        <h3 className="capitalize font-bold text-2xl md:text-lg">{type}</h3>
+        <p className="capitalize font-medium text-dark/75 dark:text-primaryDark/60 my-2 md:text-sm">
           {time} | {place}
         </p>
-        <p className="font-medium w-full">{info}</p>
+        <p className="font-medium w-full md:text-sm">{info}</p>
       </motion.div>
     </li>
   );
@@ -33,17 +33,20 @@ const Education = () => {
   });
 
   return (
-    <div className="my-64">
-      <h2 className="font-bold text-8xl lg:text-7xl md:text-6xl sm:text-5xl mb-32 w-full text-center">
+    <div className="my-64 md:my-48 sm:my-36">
+      <h2 className="font-bold text-8xl lg:text-7xl md:text-6xl sm:text-4xl mb-32 md:mb-16 w-full text-center">
         Education
       </h2>
 
-      <div ref={ref} className="w-[75%] md:w-full mx-auto relative">
+      <div
+        ref={ref}
+        className="w-[75%] xl:w-[85%] lg:w-[95%] md:w-full mx-auto relative"
+      >
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top"
+          className="absolute left-9 md:left-6 sm:left-5 md:w-[3px] sm:w-[2px] top-0 w-[4px] h-full bg-dark dark:bg-primaryDark origin-top"
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between ml-4 md:ml-2">
           <Details
             type="Junior Full Stack Developer Program (Cohort 11)"
             time="2024"

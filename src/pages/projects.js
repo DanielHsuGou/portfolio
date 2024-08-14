@@ -13,6 +13,7 @@ import toDoList from "../../public/images/projects/to_do_list.png";
 import studentCard from "../../public/images/projects/student_card.png";
 import newsChromeExtension from "../../public/images/projects/news_chromeExtension.png";
 import animal from "../../public/images/projects/animal.png";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FeaturedProject = ({
   type,
@@ -42,7 +43,7 @@ const FeaturedProject = ({
         </Link>
 
         <div className="w-1/2 lg:w-11/12 flex flex-col items-start justify-between pl-6 lg:pl-0 lg:pt-6">
-          <span className="text-primary dark:text-primaryDark font-medium text-xl">
+          <span className="text-primary dark:text-primaryDark font-medium text-xl md:text-base">
             {type}
           </span>
           <Link
@@ -50,19 +51,19 @@ const FeaturedProject = ({
             target="_blank"
             className="hover:underline underline-offset-2"
           >
-            <h2 className="text-dark dark:text-light my-2 w-full text-left text-4xl font-bold">
+            <h2 className="text-dark dark:text-light my-2 w-full text-left text-4xl md:text-2xl font-bold">
               {title}
             </h2>
           </Link>
-          <p className="my-2 font-medium text-dark dark:text-light">
+          <p className="my-2 font-medium text-dark dark:text-light md:text-sm">
             {summary}
           </p>
-          <div className="w-[80%] flex gap-2 flex-wrap mt-3">
+          <div className="w-[77%] xl:md:w-[75%] md:w-[77%] flex gap-2 flex-wrap mt-3">
             {tags.map((tag, index) =>
               tag !== "Figma" && tag !== "Database" ? (
                 <div
                   key={index}
-                  className="rounded-3xl bg-dark/90 hover:bg-primary text-light dark:bg-light/90 dark:hover:bg-primaryDark dark:text-vdark py-2 px-3 font-semibold text-xs"
+                  className="rounded-3xl bg-dark/90 hover:bg-primary text-light dark:bg-light/90 dark:hover:bg-primaryDark dark:text-vdark py-1 px-2 font-semibold text-xs"
                 >
                   {tag}
                 </div>
@@ -71,7 +72,7 @@ const FeaturedProject = ({
                   href={figmaLink}
                   key={index}
                   target="_blank"
-                  className="cursor-pointer rounded-3xl bg-dark/90 hover:bg-primary text-light dark:bg-light/90 dark:hover:bg-primaryDark dark:text-vdark py-2 px-3 font-semibold text-xs"
+                  className="cursor-pointer rounded-3xl bg-dark/90 hover:bg-primary text-light dark:bg-light/90 dark:hover:bg-primaryDark dark:text-vdark py-1 px-2 font-semibold text-xs"
                 >
                   {tag}
                 </a>
@@ -80,21 +81,21 @@ const FeaturedProject = ({
                   href={dbLink}
                   key={index}
                   target="_blank"
-                  className="cursor-pointer rounded-3xl bg-dark/90 hover:bg-primary text-light dark:bg-light/90 dark:hover:bg-primaryDark dark:text-vdark py-2 px-3 font-semibold text-xs"
+                  className="cursor-pointer rounded-3xl bg-dark/90 hover:bg-primary text-light dark:bg-light/90 dark:hover:bg-primaryDark dark:text-vdark py-1 px-2 font-semibold text-xs"
                 >
                   {tag}
                 </a>
               )
             )}
           </div>
-          <div className="mt-2 flex items-center justify-end gap-5 absolute bottom-5 right-8">
+          <div className="mt-2 flex items-center justify-end gap-5 absolute bottom-6 right-8 xl:bottom-2 xl:right-3 xl:gap-3">
             <Link href={link} target="_blank" className="text-lg">
-              <TbWorld className="w-9 h-9 text-dark hover:text-primary dark:text-light dark:hover:text-primaryDark" />
+              <TbWorld className="w-8 h-8 sm:w-7 sm:h-7 text-dark hover:text-primary dark:text-light dark:hover:text-primaryDark" />
             </Link>
             <Link
               href={github}
               target="_blank"
-              className="w-9 text-dark hover:text-primary dark:text-light dark:hover:text-primaryDark"
+              className="w-9 sm:w-8 text-dark hover:text-primary dark:text-light dark:hover:text-primaryDark"
             >
               <GithubIcon />
             </Link>
@@ -110,7 +111,7 @@ const Project = ({ title, type, img, link, github, position, tags }) => {
     <article className="w-full flex flex-col items-center justify-center rounded-2xl bg-dark dark:bg-light relative">
       {/* <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-br-3xl rounded-[2rem] bg-dark" /> */}
       <motion.div
-        className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light dark:border-light dark:bg-vdark p-6 relative shadow-md shadow-dark dark:shadow-light"
+        className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light dark:border-light dark:bg-vdark p-6 lg:px-7 lg:py-9 md:px-6 sm:px-5 relative shadow-md shadow-dark dark:shadow-light"
         whileHover={
           position === "left" ? { x: 20, y: -20 } : { x: -20, y: -20 }
         }
@@ -125,7 +126,7 @@ const Project = ({ title, type, img, link, github, position, tags }) => {
         </Link>
 
         <div className="w-full flex flex-col items-start justify-between mt-4">
-          <span className="text-primary dark:text-primaryDark font-medium text-xl">
+          <span className="text-primary dark:text-primaryDark font-medium text-xl md:text-base">
             {type}
           </span>
           <Link
@@ -133,23 +134,23 @@ const Project = ({ title, type, img, link, github, position, tags }) => {
             target="_blank"
             className="hover:underline underline-offset-2"
           >
-            <h2 className="text-dark dark:text-light my-2 w-full text-left text-3xl font-bold">
+            <h2 className="text-dark dark:text-light my-2 w-full text-left text-2xl md:text-xl font-bold">
               {title}
             </h2>
           </Link>
-          <div className="w-[80%] flex gap-2 flex-wrap mt-2">
+          <div className="w-[77%] xl:md:w-[75%] md:w-[77%] flex gap-2 flex-wrap mt-2">
             {tags &&
               tags.map((tag, index) => (
                 <div
                   key={index}
-                  className="rounded-3xl bg-dark/90 hover:bg-primary text-light dark:bg-light/90 dark:hover:bg-primaryDark dark:text-vdark py-2 px-3 font-semibold text-xs"
+                  className="rounded-3xl bg-dark/90 hover:bg-primary text-light dark:bg-light/90 dark:hover:bg-primaryDark dark:text-vdark py-1 px-2 font-semibold text-xs"
                 >
                   {tag}
                 </div>
               ))}
           </div>
 
-          <div className="mt-2 flex items-center justify-end gap-5 absolute bottom-6 right-8">
+          <div className="mt-2 flex items-center justify-end gap-4 absolute bottom-4 right-6 xl:bottom-2 xl:right-3 xl:gap-3">
             <Link href={link} target="_blank" className="text-lg">
               <TbWorld className="w-7 h-7 text-dark hover:text-primary dark:text-light dark:hover:text-primaryDark" />
             </Link>
@@ -250,6 +251,8 @@ const projects = () => {
         <title>Daniel Hsu | Projects Page</title>
         <meta name="description" content="any description" />
       </Head>
+
+      <TransitionEffect />
 
       <main className="w-full mb-16 flex flex-col items-center justify-center pt-20 px-20 xl:px-10 lg:px-14 md:px-0">
         <Layout className="pt-16">

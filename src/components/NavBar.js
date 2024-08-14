@@ -58,7 +58,7 @@ const NavBar = () => {
 
   return (
     <header className="flex justify-center">
-      <div className="w-full px-32 py-8 xl:px-24 lg:px-16 md:px-12 sm:px-8 font-medium flex items-center justify-between fixed top-1 z-10 bg-light text-dark dark:bg-vdark dark:text-light dark:shadow-light/50 shadow-sm shadow-dark/50">
+      <div className="w-full px-32 py-8 xl:px-24 lg:px-16 md:px-12 sm:px-8 font-medium flex items-center justify-between fixed z-10 bg-light text-dark dark:bg-vdark dark:text-light dark:shadow-light/50 shadow-sm shadow-dark/50">
         <button
           className="flex-col justify-center items-center hidden lg:flex"
           onClick={handleClick}
@@ -85,7 +85,7 @@ const NavBar = () => {
             <CustomLink href="/" title="Home" className="mr-4" />
             <CustomLink href="/about" title="About" className="mx-4" />
             <CustomLink href="/projects" title="Projects" className="mx-4" />
-            <CustomLink href="/designs" title="Designs" className="ml-4" />
+            {/* <CustomLink href="/designs" title="Designs" className="ml-4" /> */}
           </nav>
 
           <nav className="flex items-center justify-center flex-wrap">
@@ -157,12 +157,12 @@ const NavBar = () => {
                 className=""
                 toggle={handleClick}
               />
-              <CustomMobileLink
+              {/* <CustomMobileLink
                 href="/designs"
                 title="Designs"
                 className=""
                 toggle={handleClick}
-              />
+              /> */}
             </nav>
 
             <nav className="flex items-center justify-center flex-wrap mt-5">
