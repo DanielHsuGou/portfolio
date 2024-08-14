@@ -39,28 +39,25 @@ const about = () => {
               </h2>
               <p className="font-medium">
                 Hi, I&apos;m <span className="font-bold">Daniel Hsu</span>, an
-                aspiring web developer with a passion for creating functional
-                and user-centered digital experiences. During my university
-                studies, I majored in animation and visual effects, which has
-                given me a deep appreciation for crafting visually stunning and
-                engaging digital products.
+                aspiring web developer with a passion for creating functional,
+                user-centered digital experiences. With a background in
+                animation and visual effects, I have a strong appreciation for
+                crafting visually stunning and engaging digital products.
               </p>
 
               <p className="font-medium my-4">
-                Although I&apos;m new to the industry, I recently completed a
-                full-stack web development bootcamp where I had the opportunity
-                to combine my design experience with modern web technologies,
-                including HTML, CSS, JavaScript, React, Node.js, and SQL
-                databases. I&apos;m excited to apply these knowledge to build
-                responsive and interactive websites from the ground up.
+                I recently completed a full-stack development bootcamp, where I
+                had the opportunity to combine my design knowledge with modern
+                web technologies, gaining skills in HTML, CSS, JS, ReactJS,
+                NextJS, NodeJS, and NoSQL databases.
               </p>
 
               <p className="font-medium">
-                While I may lack professional experience, I&apos;m eager to
-                learn and grow as a web developer. I look forward to the
-                opportunity to contribute my passion and skills to your next
-                project, and to continue honing my craft in a professional
-                setting.
+                While I&apos;m new to the industry, I&apos;m eager to learn and
+                grow as a web developer. I&apos;m excited to contribute my
+                passion and skills to your next project, to build responsive and
+                interactive websites, and to continue honing my craft in a
+                professional setting.
               </p>
             </div>
             <div className="lg:hidden relative h-max rounded-2xl border-2 border-solid border-dark dark:border-light bg-light dark:bg-vdark p-8 w-1/2 max-w-[560px]">

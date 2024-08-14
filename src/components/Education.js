@@ -51,13 +51,13 @@ const Education = () => {
             type="Junior Full Stack Developer Program (Cohort 11)"
             time="2024"
             place="CLAP@JC x Generation"
-            info="Took part in a bootcamp designed for goal-oriented participants who demand getting into the IT industry. Practiced on programming, front-end and back-end web development, designing webpage, improving user experience. Gained behavioral skills and mindsets for achieving success in the IT industry."
+            info="Took part in a bootcamp tailored for goal-oriented participants entering the IT industry. Demonstrated frontend and backend development. Designed UI and improved UX across various projects."
           />
           <Details
             type="Bachelor of Fine Arts in Animation and Visual Effects"
             time="2013-2017"
             place="Hong Kong Metropolitan University"
-            info="Trained with creative design skills, digital visual effects, media production, animation and motion graphics. Understood design principles, color theory, typography and creating visually appealing interfaces which are important for effective web development."
+            info="Trained in creative design skills, digital visual effects, media production, animation and motion graphics. Understood design principles, color theory, typography and creating visually appealing interfaces."
           />
         </ul>
       </div>

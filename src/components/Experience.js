@@ -63,7 +63,7 @@ const Experience = () => {
             companyLink="https://www.recruitfirst.co/"
             time="2021-2022"
             address="Hong Kong"
-            work="Designed print materials, posters and house programmes. Created visually appealing designs such as icons, banners, and simple illustrations for websites. Fulfilled requirements of designs and be receptive to criticism which improves the work."
+            work="Designed print materials, posters and house programmes. Created visually appealing designs such as icons, banners, and simple illustrations for websites and fulfilled design requirement."
           />
           <Details
             position="Accounts Clerk"
@@ -71,7 +71,7 @@ const Experience = () => {
             companyLink="https://www.kwe.com/"
             time="2018-2020"
             address="Hong Kong"
-            work="Provided support for daily operations such as data entry, filing, issuing cheque and double entries. Assisted in administration, includes handling staff expenses, preparing letters and arrangement for courier. Communicated effectively with colleagues and managers verbally to support the entire workplace."
+            work="Provided support for accounting clerical daily operations. Assisted in administrative tasks efficiently. Communicated effectively with colleagues and managers to support the entire workplace."
           />
         </ul>
       </div>
