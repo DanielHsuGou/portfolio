@@ -14,6 +14,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
+        className="w-full" // Added this to prevent the list from centering
       >
         <h3 className="capitalize font-bold text-2xl md:text-lg">
           {position}&nbsp;
@@ -29,7 +30,14 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <p className="capitalize font-medium text-dark/75 dark:text-primaryDark/60 my-2 md:text-sm">
           {time} | {address}
         </p>
-        <p className="font-medium w-full md:text-sm">{work}</p>
+        
+        {/* Changed to list. NO color classes added to <li> */}
+        <ul className="font-medium w-full md:text-sm list-disc pl-5 space-y-1">
+          {work.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+        
       </motion.div>
     </li>
   );
@@ -58,20 +66,45 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 md:ml-2">
           <Details
+            position="Programmer"
+            company="Quadcell Communication Limited"
+            companyLink="https://www.quadcell.com/"
+            time="Sep 2024 - Present"
+            address="Hong Kong"
+            work={[
+              "Developed internal OSS platform using ReactJS, and NodeJS.",
+              "Built B2B mail platforms with primereact and backend solutions utilizing PHP, Laravel.",
+              "Administered WordPress, WooCommerce, and internal CMS platforms to support digital operations.",
+              "Developed and Managed Magento Web Store operations, including product catalog handling, frontend customization, and coupon systems.",
+              "Utilized Google Colab, GitHub, and basic ComfyUI during leisure time to explore automation and development workflows."
+            ]}
+          />
+          
+          <Details
             position="Contract Administrator Assistant"
             company="RecruitFirst Limited"
             companyLink="https://www.recruitfirst.co/"
-            time="2021-2022"
+            time="Dec 2021 - Oct 2022"
             address="Hong Kong"
-            work="Designed print materials, posters and house programmes. Created visually appealing designs such as icons, banners, and simple illustrations for websites and fulfilled design requirement."
+            work={[
+              "Designed print materials, posters and house programmes.",
+              "Created visually appealing designs such as icons, banners, simple illustrations for websites.",
+              "Fulfilled design requirement for various projects.",
+              "Open to feedback, enhancing the quality of work."
+            ]}
           />
+          
           <Details
             position="Accounts Clerk"
             company="Kintetsu World Express (HK) Limited"
             companyLink="https://www.kwe.com/"
-            time="2018-2020"
+            time="Feb 2018 - Mar 2020"
             address="Hong Kong"
-            work="Provided support for accounting clerical daily operations. Assisted in administrative tasks efficiently. Communicated effectively with colleagues and managers to support the entire workplace."
+            work={[
+              "Provided support for accounting clerical daily operations.",
+              "Assisted in administrative tasks efficiently.",
+              "Communicated effectively with colleagues and managers to support the entire workplace."
+            ]}
           />
         </ul>
       </div>

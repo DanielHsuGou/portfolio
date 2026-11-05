@@ -13,6 +13,9 @@ import toDoList from "../../public/images/projects/to_do_list.png";
 import studentCard from "../../public/images/projects/student_card.png";
 import newsChromeExtension from "../../public/images/projects/news_chromeExtension.png";
 import animal from "../../public/images/projects/animal.png";
+import batchImageResizer from "../../public/images/projects/batch_image_resizer.png";
+import base64ImageEncoder from "../../public/images/projects/base64_image_encoder.png";
+import QRBatchForge from "../../public/images/projects/qr_batch_forge.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const FeaturedProject = ({
@@ -208,14 +211,41 @@ const projects = () => {
 
   const projects = [
     {
-      title: "News Chrome Extension",
-      img: newsChromeExtension,
-      link: "https://danielhsugou.github.io/news-chromeExtension/",
-      github: "https://github.com/DanielHsuGou/news-chromeExtension",
+      title: "QR Batch Forge",
+      img: QRBatchForge,
+      link: "https://danielhsugou.github.io/qr-batch-forge/",
+      github: "https://github.com/DanielHsuGou/qr-batch-forge",
       type: "Project",
       position: "left",
-      tags: ["HTML", "CSS", "Javascript", "API"],
+      tags: ["HTML", "CSS", "Javascript"],
     },
+    {
+      title: "Batch Image Resizer & Cropper",
+      img: batchImageResizer,
+      link: "https://danielhsugou.github.io/batch-image-resizer/",
+      github: "https://github.com/DanielHsuGou/batch-image-resizer",
+      type: "Project",
+      position: "right",
+      tags: ["HTML", "CSS", "Javascript"],
+    },
+    {
+      title: "Base64 Image Encoder",
+      img: base64ImageEncoder,
+      link: "https://danielhsugou.github.io/base64-image-encoder/",
+      github: "https://github.com/DanielHsuGou/base64-image-encoder",
+      type: "Project",
+      position: "left",
+      tags: ["HTML", "CSS", "Javascript"],
+    },
+    // {
+    //   title: "News Chrome Extension",
+    //   img: newsChromeExtension,
+    //   link: "https://danielhsugou.github.io/news-chromeExtension/",
+    //   github: "https://github.com/DanielHsuGou/news-chromeExtension",
+    //   type: "Project",
+    //   position: "left",
+    //   tags: ["HTML", "CSS", "Javascript", "API"],
+    // },
     {
       title: "To Do List",
       img: toDoList,
