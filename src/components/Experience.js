@@ -27,37 +27,23 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
             @{company}
           </a>
         </h3>
-        
-        {/* Increased margin bottom for date/address */}
-        <p className="capitalize font-medium text-dark/75 dark:text-primaryDark/60 mt-3 mb-8 md:text-sm">
+
+        <p className="capitalize font-medium text-dark/75 dark:text-primaryDark/60 mt-3 mb-6 md:text-sm">
           {time} | {address}
         </p>
 
-        {/* Increased space between each item to space-y-6 */}
-        <ul className="font-medium w-full md:text-sm space-y-6">
-          {work.map((item, index) => {
-            if (typeof item === "string") {
-              return (
-                <li key={index} className="list-disc pl-5">
-                  {item}
-                </li>
-              );
-            }
+        <ul className="font-medium w-full md:text-sm space-y-4">
+          {work.map((block, index) => {
             return (
-              <li
-                key={index}
-                className="pl-5 border-l-2 border-primary/50 dark:border-primaryDark/50"
-              >
-                {/* Subtitle on its own line */}
-                {item.title && (
-                  <div className="font-bold text-primary dark:text-primaryDark mb-1.5">
-                    {item.title}
-                  </div>
-                )}
-                {/* Content on the next line */}
-                <div className="leading-relaxed">
-                  {item.content}
+              <li key={index} className="pl-5 border-l-2 border-primary/50 dark:border-primaryDark/50">
+                <div className="font-bold text-primary dark:text-primaryDark mb-2">
+                  {block.title}
                 </div>
+                <ul className="list-disc pl-6 space-y-2">
+                  {block.content.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
               </li>
             );
           })}
@@ -69,9 +55,10 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
 
 const Experience = () => {
   const ref = useRef(null);
+  // 移除 useSpring，使用原生 scrollYProgress；保留offset修复“刚进入就跑到底”
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "center start"],
+    offset: ["20% end", "80% start"],
   });
 
   return (
@@ -84,6 +71,7 @@ const Experience = () => {
         ref={ref}
         className="w-[75%] xl:w-[85%] lg:w-[95%] md:w-full mx-auto relative"
       >
+        {/* 直接使用原生 scrollYProgress，无弹簧平滑 */}
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 md:left-6 sm:left-5 md:w-[3px] sm:w-[2px] top-0 w-[4px] h-full bg-dark dark:bg-primaryDark origin-top"
@@ -97,30 +85,44 @@ const Experience = () => {
             address="Hong Kong"
             work={[
               {
-                title: "End-to-End Feature & Regression Testing",
-                content:
-                  "Conducted thorough functional, UI, and regression testing across internal OSS platforms (ReactJS/NodeJS) and B2B mall applications (PrimeReact/PHP/Laravel) prior to deployment.",
+                title: "Development & Testing — OSS & B2B Mall",
+                content: [
+                  "Developed and tested internal OSS platforms (ReactJS/NodeJS) and B2B mall applications (PrimeReact/PHP/Laravel).",
+                  "Managed user roles and access control; supported business‑partner workflows: partner login, product onboarding, order placement and order administration.",
+                  "Built partner‑facing APIs for eSIM ordering and provisioning, integrated with upstream provider APIs to process eSIM orders.",
+                  "Configured SMTP settings, customisable senders and email templates for eSIM confirmation and provision‑failure notifications."
+                ]
               },
               {
-                title: "E-Commerce & Workflow Validation",
-                content:
-                  "Managed and tested critical user journeys on Magento, WordPress, and WooCommerce platforms—validating product catalog updates, frontend customizations, coupon/discount logic and checkout/payment flows (including developing and testing PayMe and MPay payment integrations) to prevent production defects.",
+                title: "Internal CMS Enhancements",
+                content: [
+                  "Implemented database query functions for generating order summary reports within internal CMS.",
+                  "Optimised workflows by building new upload pages for images and eSIM details to server and database."
+                ]
               },
               {
-                title: "Debugging & Root Cause Analysis",
-                content:
-                  "Diagnosed frontend rendering issues, backend API discrepancies, and database errors, collaborating closely with team members to reproduce, document, and resolve bugs.",
+                title: "E‑Commerce & Integration",
+                content: [
+                  "Administered and tested core user journeys across Magento, WordPress and WooCommerce.",
+                  "Managed product catalog updates, frontend customisations, coupon/discount rules and checkout/payment workflows.",
+                  "Developed and tested PayMe and MPay payment integrations.",
+                  "Built custom Magento plugins for Magento‑internal CMS data sync and custom coupon logic.",
+                  "Implemented webhooks triggered from Shopify and Shopee to feed customer order data to mall backend.",
+                  "Delivered RNR workflows on Magento Web Store integrated with iamsmart."
+                ]
               },
               {
-                title: "Tools & Workflow",
-                content:
-                  "Utilized GitHub for version control and issue tracking, and Postman for API testing and validation.",
-              },
+                title: "Version Control & API Testing",
+                content: [
+                  "Utilised GitHub for version control and issue tracking.",
+                  "Leveraged Postman for API testing and validation."
+                ]
+              }
             ]}
           />
 
           <Details
-            position="Contract Administrator Assistant"
+            position="Contract Administrator Assistant (Design & Visual)"
             company="RecruitFirst Limited"
             companyLink="https://www.recruitfirst.co/"
             time="Dec 2021 - Oct 2022"
@@ -128,14 +130,18 @@ const Experience = () => {
             work={[
               {
                 title: "Visual & Layout Verification",
-                content:
-                  "Designed and proofed print materials, posters, house programmes, and web assets (icons, banners, illustrations), ensuring strict adherence to brand guidelines, typography, and layout accuracy.",
+                content: [
+                  "Designed print materials, posters, house programmes and web assets (icons, banners, illustrations).",
+                  "Ensured strict adherence to brand guidelines, typography and layout accuracy."
+                ]
               },
               {
                 title: "Stakeholder Feedback Integration",
-                content:
-                  "Reviewed deliverables against project requirements and iteratively refined outputs based on team feedback to achieve zero-defect final delivery.",
-              },
+                content: [
+                  "Fulfilled design requirements for multiple projects.",
+                  "Iteratively refined deliverables based on team feedback to improve output quality."
+                ]
+              }
             ]}
           />
 
@@ -147,15 +153,19 @@ const Experience = () => {
             address="Hong Kong"
             work={[
               {
-                title: "Data Accuracy & Reconciliation",
-                content:
-                  "Performed daily accounting clerical operations with high attention to detail, verifying financial records, cross-checking documentation, and identifying data discrepancies.",
+                title: "Data Accuracy & Support",
+                content: [
+                  "Performed daily accounting clerical operations and maintained accurate records.",
+                  "Verified financial records and identified data discrepancies.",
+                  "Assisted general administrative tasks efficiently."
+                ]
               },
               {
-                title: "Cross-Team Communication",
-                content:
-                  "Communicated clearly with colleagues and managers to resolve administrative bottlenecks and maintain accurate operational records.",
-              },
+                title: "Cross‑team Communication",
+                content: [
+                  "Communicated effectively with colleagues and managers for daily operations."
+                ]
+              }
             ]}
           />
         </ul>

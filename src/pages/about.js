@@ -42,9 +42,9 @@ const about = () => {
               </h2>
               <p className="font-medium">
                 Hi, I&apos;m <span className="font-bold">Daniel Hsu</span>, a
-                detail-oriented programmer and UI/UX-focused technologist with a
-                background in animation and visual effects. I have practical
-                experience building web applications, internal platforms, and
+                detail-oriented person with experience in web development, UI/UX,
+                design and administration, as well as a background in animation and visual effects.
+                I have practical experience building web applications, internal platforms, and
                 e-commerce operations, and I also place great importance on
                 testing and verification in my work.
               </p>
@@ -52,16 +52,15 @@ const about = () => {
               <p className="font-medium my-4">
                 My technical background includes ReactJS, NextJS, NodeJS, PHP,
                 Laravel, and CMS platforms such as WordPress, WooCommerce, and
-                Magento. I combine this hands-on development experience with a
-                sharp eye for visual detail to identify UI/UX inconsistencies,
-                functional bugs, and edge cases early in the development
-                lifecycle.
+                Magento. I combine this hands-on development experience with
+                visual design sensibility to build cohesive systems, consistent UI/UX,
+                smooth workflows and robust user journeys.
               </p>
 
               <p className="font-medium">
                 I am comfortable performing manual testing, functional and
                 regression testing, API validation using Postman, cross-browser
-                testing, and bug tracking via GitHub, and I always aim to
+                testing, and version control via GitHub, and I always aim to
                 deliver reliable web application releases. In my spare time, I
                 explore tools like Google Colab, GitHub, and basic ComfyUI, and
                 I am focused on structured, detail-oriented digital and

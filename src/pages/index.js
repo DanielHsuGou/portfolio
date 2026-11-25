@@ -46,11 +46,7 @@ export default function Home() {
                   className="!text-6xl !text-left"
                 />
                 <p className="my-4 text-base font-medium">
-                  As a detail-oriented full-stack developer and tester, I am dedicated to
-                  turning ideas into reliable web applications. I also place
-                  great importance on testing and verification in my work.
-                  Explore my latest projects, showcasing my experience in web
-                  development and testing.
+                  Detail-oriented and quality-focused, I turn ideas into reliable digital solutions. I place great importance on validation and careful review in my work. Explore my latest projects to see my experience building digital work.
                 </p>
                 {/* <div className="flex items-center self-start mt-2">
                   <Link
